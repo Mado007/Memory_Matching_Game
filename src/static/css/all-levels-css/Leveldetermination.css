@@ -7,29 +7,71 @@ body {
   height: 100vh;
   margin: 0;
 }
+
 h1 {
   text-align: center;
   margin-bottom: 10px;
   color: rgb(66, 59, 59);
   margin-top: 50px;
+  font-size: 4vw;
 }
+
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   margin-top: 60px;
+  width: 90%;
+  max-width: 1200px;
 }
+
 .BOXS-OFITEMS {
   background-color: #631911;
   color: rgb(188, 160, 160);
-  padding: 50px;
+  padding: 40px;
   text-align: center;
-  height: 140px;
+  height: 120px;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
-  width: 210px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  font-size: 110%;
 }
+
+
 .BOXS-OFITEMS:hover {
    background-color: #40030f;
+}
+
+
+@media (max-width: 768px) {
+  
+  .container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  h1 {
+    font-size: 6vw;
+  }
+
+  .BOXS-OFITEMS {
+    padding: 30px;
+    font-size: 115%;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 6vw;
+  }
+
+  .BOXS-OFITEMS {
+    padding: 20px;
+    font-size: 115%;
+    height: 100px;
+  }
 }

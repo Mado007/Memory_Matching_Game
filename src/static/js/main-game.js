@@ -1,3 +1,3 @@
 function goToSettings() {
-  window.location.href = "settings.html";
+  window.location.href = "../src/static/html/all-levels-html/Leveldetermination.html";
 }

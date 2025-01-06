@@ -1,12 +1,28 @@
 let moves = 0;
-
-
+let startTime = null;
+let timerInterval;
 let flippedCards = [];
 let matchedCards = [];
 const cards = document.querySelectorAll(".game-block");// All cards
 const leaderboard = document.getElementById("leaderboard"); // Leaderboard modal
 const flipSound = document.getElementById("flipSound"); // the sound of flip card
 let scores = JSON.parse(localStorage.getItem("scores")) || []; // Get saved scores
+
+// Start the timer
+function startTimer() {
+    startTime = Date.now();
+    timerInterval = setInterval(() => {
+        const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+        const minutes = Math.floor(elapsedTime / 60).toString().padStart(2, "0");
+        const seconds = (elapsedTime % 60).toString().padStart(2, "0");
+        document.getElementById("current-time").textContent = `${minutes}:${seconds}`;
+    }, 1000);
+}
+
+// Stop the timer
+function stopTimer() {
+    clearInterval(timerInterval);
+}
 
 // Handle card flip
 cards.forEach((card) => {

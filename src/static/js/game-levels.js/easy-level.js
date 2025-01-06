@@ -93,7 +93,15 @@ function showLeaderboard(currentScore) {
 }
 
 // Restart the game
-
+document.getElementById("restart-button").addEventListener("click", () => {
+    moves = 0;
+    matchedCards = [];
+    flippedCards = [];
+    document.querySelector(".tries span").textContent = moves;
+    leaderboard.style.display = "none";
+    cards.forEach((card) => card.classList.remove("is-flipped"));
+    startTimer();
+});
 
 // Start the game
 function startGame() {

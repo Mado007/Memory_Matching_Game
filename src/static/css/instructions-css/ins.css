@@ -5,7 +5,10 @@
     color: white;
 }
 body{
-    background-color: black;
+    /* background-color: black; */
+    background-image: url("../../../assets/images/game-icon/bg5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .container {
     display: flex;
@@ -13,7 +16,7 @@ body{
     align-items: center;
     padding: 40px;
 }
-.ins-vol{
+.ins-container{
     padding: 40px;
     border: 2px solid white;
     width: 50%;
@@ -22,5 +25,30 @@ body{
     0 0 5px rgba(203, 252, 255, 0.989),
     0 0 10px rgba(203, 252, 255, 0.989);
     border-radius: 10px;
-    background-color: rgba(17, 45, 69, 0.989);
+    background-color: rgba(53, 17, 69, 0.795);
+}
+.ins >p {
+    text-align: justify;
+    line-height: 25px;
+    margin-bottom: 10px;
+    font-family: "Teko", serif;
+    font-optical-sizing: auto;
+    font-size: 24px;
+}
+.ins > h1{
+    font-family: "Sixtyfour", serif;
+    margin-bottom: 20px;
+}
+
+.ins-container > a {
+    text-decoration: none;
+    color: rgb(62, 3, 53);
+    /* background-color: rgba(203, 252, 255, 0.989); */
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    background-image: url("../../../assets/images/game-icon/buttonbg1.jpg");
 }

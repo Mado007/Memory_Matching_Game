@@ -1,55 +1,43 @@
-const audio = document.getElementById('backgroundMusic');
+// Get or create the audio element
+let audio = document.getElementById('backgroundMusic');
+if (!audio) {
+    audio = document.createElement('audio');
+    audio.id = 'backgroundMusic';
+    audio.src = '../../../assets/sounds/space-station-247790.mp3'; // Adjust path if necessary
+    audio.loop = true;
+    document.body.appendChild(audio);
+}
+
+// Retrieve saved volume or set a default value
+const savedVolume = localStorage.getItem('audioVolume') || 0.5;
+audio.volume = savedVolume;
+
+// Play the audio automatically
+audio.play();
+
+// Save volume when the slider changes
 document.addEventListener('DOMContentLoaded', () => {
-    
-    function setVolume(value) {
-       
-            audio.volume = value;
-        
-        localStorage.setItem('audioVolume', value);
-    }
-    
-    const savedVolume = localStorage.getItem('audioVolume') || 0.5;
-    setVolume(savedVolume);
-    
-
     const volumeSlider = document.getElementById('volumeSlider');
-    volumeSlider.value = savedVolume;
-    volumeSlider.addEventListener('input', (event) => {
-        setVolume(event.target.value);
-    });
-    
-    window.addEventListener('load', () => {
-        const savedVolume = localStorage.getItem('audioVolume') || 0.5;
-        setVolume(savedVolume);
-    });
+    if (volumeSlider) {
+        volumeSlider.value = savedVolume;
 
+        volumeSlider.addEventListener('input', (event) => {
+            const newVolume = event.target.value;
+            audio.volume = newVolume;
+            localStorage.setItem('audioVolume', newVolume);
+        });
+    }
 
-// const playButton = document.getElementById('playButton');
-// playButton.addEventListener('click', () => {
-//     audio.play();
-// });
-
-
-const muteButton = document.getElementById('muteButton');
-
-muteButton.addEventListener('click', () => {
-    if (audio.muted) {
-        audio.muted = false; // Unmute the audio
-        muteButton.textContent = 'Mute'; // Change button text to "Mute"
-        muteButton.classList.remove('unmute');
-        muteButton.classList.add('mute');
-    } else {
-        audio.muted = true; // Mute the audio
-        muteButton.textContent = 'Unmute'; // Change button text to "Unmute"
-        muteButton.classList.remove('mute');
-        muteButton.classList.add('unmute');
+    const muteButton = document.getElementById('muteButton');
+    if (muteButton) {
+        muteButton.addEventListener('click', () => {
+            if (audio.muted) {
+                audio.muted = false;
+                muteButton.textContent = 'Mute';
+            } else {
+                audio.muted = true;
+                muteButton.textContent = 'Unmute';
+            }
+        });
     }
 });
-
-});
-
-// const mute=document.getElementById('mute');
-// mute.addEventListener('click', () => {
-// audio.setAttribute("muted")
-// })
-

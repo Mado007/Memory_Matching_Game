@@ -15,7 +15,7 @@ function startTimer() {
         const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
         const minutes = Math.floor(elapsedTime / 60).toString().padStart(2, "0");
         const seconds = (elapsedTime % 60).toString().padStart(2, "0");
-        document.getElementById("current-time").textContent = `${minutes}:${seconds}`;
+        document.getElementById("game-time").textContent = `${minutes}:${seconds}`;
     }, 1000);
 }
 
@@ -27,7 +27,7 @@ function stopTimer() {
 // Handle card flip
 cards.forEach((card) => {
     card.addEventListener("click", () => {
-        if (flippedCards.length < 2 && !card.classList.contains("is-flipped")) {
+        if (flippedCards.length < 2 && !card.classList.contains("is-flipped") && !matchedCards.includes(card)) {
             card.classList.add("is-flipped");
             flippedCards.push(card);
 
@@ -53,6 +53,11 @@ function checkMatch() {
     ) {
         matchedCards.push(firstCard, secondCard);
         flippedCards = [];
+        // Play match sound
+        const matchSound = document.getElementById("matchSound");
+        matchSound.currentTime = 0;
+        matchSound.play();
+
         if (matchedCards.length === cards.length) {
             endGame();
         }
@@ -67,7 +72,7 @@ function checkMatch() {
 // End the game
 function endGame() {
     stopTimer();
-    const elapsedTime = document.getElementById("current-time").textContent;
+    const elapsedTime = document.getElementById("game-time").textContent;
     const currentScore = { moves, time: elapsedTime };
     scores.push(currentScore);
     scores.sort((a, b) => a.moves - b.moves || a.time.localeCompare(b.time)); // Sort by moves and time
@@ -78,18 +83,30 @@ function endGame() {
 // Show leaderboard
 function showLeaderboard(currentScore) {
     document.getElementById("current-moves").textContent = currentScore.moves;
-    document.getElementById("current-time").textContent = currentScore.time;
-
+    document.getElementById("leaderboard-time").textContent = currentScore.time;
+  
     const scoresContainer = document.getElementById("scores");
     scoresContainer.innerHTML = ""; // Clear previous scores
-
+  
     scores.slice(0, 5).forEach((score, index) => {
         const scoreItem = document.createElement("p");
         scoreItem.textContent = `#${index + 1} - Moves: ${score.moves}, Time: ${score.time}`;
         scoresContainer.appendChild(scoreItem);
     });
-
+  
     leaderboard.style.display = "block"; // Show the leaderboard
+    leaderboard.style.visibility = "visible"; 
+  }
+
+// Shuffle cards
+function shuffleCards() {
+    const cardArray = Array.from(cards);
+    cardArray.forEach((card) => card.classList.remove("is-flipped"));
+
+    const shuffled = cardArray.sort(() => Math.random() - 0.5);
+    const parent = cardArray[0].parentNode;
+
+    shuffled.forEach((card) => parent.appendChild(card));
 }
 
 // Restart the game
@@ -99,8 +116,14 @@ document.getElementById("restart-button").addEventListener("click", () => {
     flippedCards = [];
     document.querySelector(".tries span").textContent = moves;
     leaderboard.style.display = "none";
+    leaderboard.style.visibility = "hidden"; 
+    leaderboard.style.opacity = "0";
     cards.forEach((card) => card.classList.remove("is-flipped"));
-    startTimer();
+    shuffleCards();
+// Reset timer
+  clearInterval(timerInterval); 
+// Start fresh timer
+  startTimer(); 
 });
 
 // Start the game
@@ -110,6 +133,7 @@ function startGame() {
     flippedCards = [];
     document.querySelector(".tries span").textContent = moves;
     leaderboard.style.display = "none";
+    shuffleCards();
     startTimer();
 }
 

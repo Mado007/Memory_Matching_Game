@@ -3,9 +3,9 @@ let startTime = null;
 let timerInterval;
 let flippedCards = [];
 let matchedCards = [];
-const cards = document.querySelectorAll(".game-block");
+const cards = document.querySelectorAll(".game-block");// All cards
 const leaderboard = document.getElementById("leaderboard"); // Leaderboard modal
-const flipSound = document.getElementById("flipSound"); // The sound of flip card
+const flipSound = document.getElementById("flipSound"); // the sound of flip card
 let scores = JSON.parse(localStorage.getItem("scores")) || []; // Get saved scores
 
 // Start the timer

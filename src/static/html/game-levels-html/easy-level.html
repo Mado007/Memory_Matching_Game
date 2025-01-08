@@ -11,17 +11,18 @@
 <body>
     <!-- <h1>Easy-Level</h1> -->
 
-    <audio id="flipSound" src="../../../assets/sounds/flip.wav"></audio>
+    <audio id="flipSound" src="../../../assets/sounds/card-flip-sound.wav"></audio>
+    <audio id="matchSound" src="../../../assets/sounds/matched.wav"></audio>
     <div class="info">
         <div class="playerName">
-            Time : <span></span>
+            <p>Time: <span id="game-time">00:00</span></p>
         </div>
         <div class="tries">
-            Moves : <span>0</span>
+            Moves: <span>0</span>
         </div>
     </div>
 
-    <div class="game-container">
+    <div class="game-container" id="game-container">
         <!-- card 1 -->
         <div class="game-block">
             <div class="face front">
@@ -168,10 +169,9 @@
         </div>
     </div>
     <div class="leaderboard" id="leaderboard">
-        <h2>🏆Leaderboard🏆</h2>
+        <h2>🏆 Leaderboard 🏆</h2>
         <p>Your moves: <span id="current-moves">0</span></p>
-        <p>Time: <span id="current-time">00:00</span></p>
-        <!-- Scores will be dynamically added here -->
+        <p>Time: <span id="leaderboard-time">00:00</span></p>
         <div id="scores"></div>
         <button class="button" id="restart-button">Restart</button>
     </div>

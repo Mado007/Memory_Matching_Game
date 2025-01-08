@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>settings</title>
+    <link rel="stylesheet" href="../../css/game-setting-css/setting.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Jersey+10&family=Sixtyfour&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="settings-container">
+            <h1>controls</h1>
+            <div class="vslider">
+        
+                <audio id="backgroundMusic" src="../../../assets/sounds/space-station-247790.mp3"  autoplay loop></audio>
+                <input type="range"  id="volumeSlider" min="0" max="1" step="0.1" class="volume-slider" value="0.5">
+                <button id="muteButton" class="mute">mute</button>
+                
+
+            </div>
+            <div class="continue">
+                <a id="continueButton" href="../all-levels-html/Leveldetermination.html">continue</a>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/game-setting-js/setting.js"></script>
+</body>
+</html>

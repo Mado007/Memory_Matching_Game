@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body{
+    background-color: black;
+    background-image: url("../../../assets/images/game-icon/bg5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.settings-container{
+    padding: 40px;
+    border: 2px solid white;
+    width: 50%;
+    box-shadow:0 0 5px rgba(203, 252, 255, 0.989),
+    0 0 5px rgba(203, 252, 255, 0.989),
+    0 0 5px rgba(203, 252, 255, 0.989),
+    0 0 10px rgba(203, 252, 255, 0.989);
+    border-radius: 10px;
+    background-color: rgba(53, 17, 69, 0.795);
+}
+/* range input style */
+
+.volume-slider {
+    -webkit-appearance: none; /* Remove default styling in WebKit browsers */
+    width: 90%; /* Full width */
+    height: 15px; /* Height of the slider */
+    /* background: #c0e105;  */
+    background: rgb(250,5,5);
+    background: linear-gradient(274deg, rgba(250,5,5,1) 0%, rgba(215,126,8,1) 32%, rgba(240,241,4,1) 100%);
+    border-radius: 5px; /* Round corners */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Slightly transparent */
+    transition: opacity .2s; /* Smooth transition */
+}
+
+.volume-slider:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+/* Custom thumb */
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none; /* Remove default styling */
+    width: 0; /* No width */
+    height: 0; /* No height */
+    border-left: 15px solid transparent; /* Left side of triangle */
+    border-right: 15px solid transparent; /* Right side of triangle */
+    border-bottom: 20px solid #466fce; /* Triangle color */
+    cursor: pointer; /* Pointer cursor */
+    margin-top: -2px; /* Position the triangle */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 25px; /* Width of the thumb */
+    height: 25px; /* Height of the thumb */
+    border-radius: 50%; /* Round shape */
+    background: #8d0769; /* Thumb color */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Track styles for Firefox */
+.volume-slider::-moz-range-track {
+    background: #ddd; /* Background color */
+    border-radius: 5px; /* Round corners */
+    height: 15px; /* Height of the track */
+}
+
+
+
+.settings-container > h1{
+    font-family: "Sixtyfour", serif;
+    margin-bottom: 40px;
+}
+.ins-container > a {
+    text-decoration: none;
+    color: rgb(62, 3, 53);
+    /* background-color: rgba(203, 252, 255, 0.989); */
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    background-image: url("../../../assets/images/game-icon/buttonbg1.jpg");
+}
+#muteButton {
+    background-color: rgba(203, 252, 255, 0.8);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#muteButton:hover {
+    background-color: rgba(203, 252, 255, 1);
+}
+
+.mute {
+    background-color: #f44336; 
+}
+
+.unmute {
+    background-color: #4caf50; 
+}
+
+#continueButton {
+    background-color: rgba(131, 253, 9, 0.968);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
+    margin-top:30px;
+}
+
+#continueButton:hover {
+    background-color: rgb(127, 236, 115);
+}
+.continue{
+    text-align: center;
+}

@@ -1,48 +1,56 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #929292;
+  font-family: "Encode Sans Expanded", sans-serif;
+  background: linear-gradient(135deg, #b9bdc4c7, #194288);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   margin: 0;
+  color: #f0f0f0;
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
-  margin-bottom: 10px;
-  color: rgb(66, 59, 59);
-  margin-top: 50px;
+  margin-bottom: 50px;
   font-size: 4vw;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  margin-top: 60px;
+  gap: 30px;
   width: 90%;
   max-width: 1200px;
 }
 
 .BOXS-OFITEMS {
-  background-color: #631911;
-  color: rgb(188, 160, 160);
-  padding: 40px;
-  text-align: center;
-  height: 120px;
-  border-radius: 10px;
+  background: linear-gradient(135deg, #3a1c71, #d76d77);
+  color: #ffffff;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.8s ease;
   cursor: pointer;
-  transition: background-color 0.3s;
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-  font-size: 110%;
+  font-size: 1.2rem;
 }
 
-
 .BOXS-OFITEMS:hover {
-   background-color: #40030f;
+  background: linear-gradient(135deg, #7643a083, #d72638);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.BOXS-OFITEMS h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.BOXS-OFITEMS p {
+  margin: 10px 0 0;
+  font-size: 1rem;
 }
 
 

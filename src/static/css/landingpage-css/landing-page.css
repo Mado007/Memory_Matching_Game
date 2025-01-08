@@ -1,8 +1,11 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Sixtyfour", serif;
   overflow: hidden;
+  background: linear-gradient(135deg, #414752, #567bb9); /* Smooth gradient background */
+  color: #f0f0f0;
 }
+
 .container {
   position: relative;
   display: flex;
@@ -11,36 +14,43 @@ body {
   align-items: center;
   height: 100vh;
   text-align: center;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+
 }
+
 h1 {
-  margin-bottom: 6%;
-  font-size: 6vw; 
-  text-shadow: 2px 2px 5px rgba(230, 223, 223, 0.7);
-  cursor: default;
+  margin-bottom: 5%;
+  font-size: 6.5vw;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.908);
+  cursor: default; 
+  animation: fadeInDown 1.9s ease-in-out;
 }
+
 button {
-  padding: 2% 10%;
-  font-size: 5vw;
-  color: #fff;
-  background-color: #007bff;
+  padding: 1.5% 8%;
+  font-size: 4vw;
+  color: #ffffff;
+  background: linear-gradient(90deg, #007bff, #111e21);
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.7s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.8s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 1.9s ease-in-out;
 }
+
 button:hover {
-  background-color: #0056b3;
-  color: rgb(7, 8, 6);
+  background: linear-gradient(90deg, #0056b3, #007bff);
   transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
+
 button:active {
   transform: scale(0.95);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
+
 .video-container {
   position: fixed;
   top: 0;
@@ -51,12 +61,13 @@ button:active {
   height: 100%;
   z-index: -1;
 }
+
 iframe {
   width: 100%;
   height: 100%;
   border: none;
 }
-/* استعلامات الوسائط للتجاوب */
+
 @media (max-width: 768px) {
   h1 {
     font-size: 6vw;
@@ -64,7 +75,7 @@ iframe {
 
   button {
     padding: 10px 20px;
-    font-size: 4vw; 
+    font-size: 4vw;
   }
 }
 
@@ -76,5 +87,26 @@ iframe {
   button {
     padding: 8px 15px;
     font-size: 5vw;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

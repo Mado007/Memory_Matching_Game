@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Teko", serif;
+    font-size: 25px;
 }
 body{
     background-image: url(../../../assets/images/game-icon/background\ 1.jpg);

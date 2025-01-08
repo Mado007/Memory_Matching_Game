@@ -1,3 +1,3 @@
 function goToSettings() {
-  window.location.href = "../src/static/html/instructions-html/ins.html";
+  window.location.href = "../src/static/html/instructions-html/instructions.html";
 }

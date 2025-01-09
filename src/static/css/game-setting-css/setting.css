@@ -9,6 +9,7 @@ body{
     background-image: url("../../../assets/images/game-icon/bg5.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
 }
 .container {
     display: flex;
@@ -48,16 +49,16 @@ body{
 
 /* Custom thumb */
 .volume-slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Remove default styling */
-    appearance: none; /* Remove default styling */
-    width: 0; /* No width */
-    height: 0; /* No height */
-    border-left: 15px solid transparent; /* Left side of triangle */
-    border-right: 15px solid transparent; /* Right side of triangle */
-    border-bottom: 20px solid #466fce; /* Triangle color */
-    cursor: pointer; /* Pointer cursor */
-    margin-top: -2px; /* Position the triangle */
-    cursor: pointer; /* Pointer cursor */
+    -webkit-appearance: none; 
+    appearance: none; 
+    width: 0; 
+    height: 0; 
+    border-left: 15px solid transparent; 
+    border-right: 15px solid transparent; 
+    border-bottom: 20px solid #0755fd; 
+    cursor: pointer; 
+    margin-top: -1px; 
+    cursor: pointer; 
 }
 
 .volume-slider::-moz-range-thumb {
@@ -103,6 +104,7 @@ body{
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    margin-bottom: 20px;
 }
 
 #muteButton:hover {
@@ -118,12 +120,13 @@ body{
 }
 
 #continueButton {
-    background-color: rgba(131, 253, 9, 0.968);
-    color: black;
+    background: rgb(220,5,107);
+background: linear-gradient(274deg, rgba(220,5,107,1) 0%, rgba(111,4,241,1) 100%);
+    color: rgb(255, 251, 251);
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
-    font-size: 18px;
+    font-size: 22px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     text-decoration: none;
@@ -131,8 +134,31 @@ body{
 }
 
 #continueButton:hover {
-    background-color: rgb(127, 236, 115);
+    background: rgb(111,4,241);
+    background: linear-gradient(274deg, rgba(111,4,241,1) 1%, rgba(220,5,107,1) 59%);
 }
 .continue{
     text-align: center;
+}
+
+
+/* media query */
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .settings-container {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .settings-container > h1 {
+        font-size: 28px; /* Decrease font size */
+        margin-bottom: 20px; /* Adjust margin */
+    }
+
+    #muteButton,
+    #continueButton {
+        font-size: 16px; /* Decrease button font size */
+        padding: 8px 12px; /* Reduce padding */
+    }
 }

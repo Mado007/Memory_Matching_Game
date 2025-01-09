@@ -4,15 +4,13 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(../../../assets/images/game-icon/HARDLEVEL/hardlevel.jpeg);
-    /* background: linear-gradient(325deg, #1a1a1a 0%, #ff0000 30%, #660000 70%, #330000 100%); */
-    /* background-repeat: no-repeat; */
-    /* background-size:contain; */
-    /* background-position: center; */
-
-    background-size: cover; 
-    background-position: center;
-
+    background-image: url(../../../assets/images/game-icon/HARDLEVEL/hardlevel1.jpg );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
 }
 .info{
     display: flex;
@@ -31,24 +29,20 @@ body{
 }
 
 .game-container{
-    /* height: 500px;
-    width: 500px; */
     height: 600px;
-    width: 600px; 
-
-
+    width: 600px;
     margin: auto;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(5, 1fr); 
-    gap: 20px;
+    grid-template-columns: repeat(8, 1fr); 
+    gap: 10px;
     background-color: rgb(20 29 44);
-}
+  }
 .game-container .game-block{
-    width: 100px;
-    height: 100px ;
+    width: 100%;
+    height: 100%;
     background-color: rgba(22, 21, 21, 0.79);
     border-radius: 5px;
     transition: transform 0.5s;
@@ -59,13 +53,11 @@ body{
 }
 .game-container .game-block .front{
     font-size: 70px;
-    line-height: 100px;
+    line-height: 100%;
     color: #f97cec;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
 }
 .game-container .game-block .back{
     transform: rotateY(180deg);
@@ -73,8 +65,8 @@ body{
     border-radius: 5px;
 }
 .game-container .game-block .back  p{
-    font-size: 70px;
-    line-height: 100px;
+    font-size: 52px;
+    line-height: 65px;
 }
 
 .game-container .game-block .face {
@@ -135,4 +127,42 @@ body{
   
   #leaderboard .button:hover {
     background-color: #20e2c8; 
+  }
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .game-container {
+      width: 100%; 
+      height: calc(90vw / 6 * 6); 
+      gap: 8px;
+    }
+    .game-container .game-block .front,
+    .game-container .game-block .back {
+      font-size: calc(3vw + 5px);
+    }
+    .info {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      padding: 15px;
+    }
+    #leaderboard {
+      width: 95%;
+    }
+  }
+  @media (max-width: 480px) {
+    .game-container {
+      height: calc(100vw / 6 * 6); 
+      gap: 5px;
+    }
+    .game-container .game-block .front,
+    .game-container .game-block .back {
+      font-size: calc(4vw + 3px);
+    }
+    .info {
+      width: 90%;
+      padding: 10px;
+    }
+    #leaderboard {
+      width: 90%;
+    }
   }

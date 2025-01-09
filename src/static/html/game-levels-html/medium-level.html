@@ -4,11 +4,369 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flip Frenzy is a memory game that helps you to improve your memory.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Jersey+10&family=Sixtyfour&family=Teko:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../../assets/images/site-icon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../../../assets/images/site-icon/favicon.svg" />
+  <link rel="shortcut icon" href="../../../assets/images/site-icon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/images/site-icon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Flip Frenzy" />
+  <link rel="manifest" href="../../../assets/images/site-icon/site.webmanifest" />
+  <link rel="stylesheet" href="../../css/game-levels-css/medium-level.css">
   <title>Medium-Level</title>
 </head>
 
 <body>
-  <h1>medium-level</h1>
+  <audio id="flipSound" src="../../../assets/sounds/card-flip-sound.wav"></audio>
+  <audio id="matchSound" src="../../../assets/sounds/matched.wav"></audio>
+  <div class="info">
+    <div class="playerName">
+      <p>Time: <span id="game-time">00:00</span></p>
+    </div>
+    <div class="tries">
+      Moves: <span>0</span>
+    </div>
+  </div>
+
+  <div class="game-container" id="game-container">
+    <!-- card 1 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/01.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 2 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/02.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 3 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/03.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 4 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/04.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 5 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/05.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 6 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/06.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 7 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/07.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 8-->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/08.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 9 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/09.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 10 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/10.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 11 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/11.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 12 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/12.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 13 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/13.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 14 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/14.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 15 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/15.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 16 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/16.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 17 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/17.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 18 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/18.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 19 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/01.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 20 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/02.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 21 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/03.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 22 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/04.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 23 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/05.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 24 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/06.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 25 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/07.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 26 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/08.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 27 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/09.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 28 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/10.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 29 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/11.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 30 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/12.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 31 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/13.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 32 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/14.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 33 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/15.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 34 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/16.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 35 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/17.webp" alt="Back Image">
+      </div>
+    </div>
+    <!-- card 36 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class="face back">
+        <img src="../../../assets/images/game-icon/medium-icons/18.webp" alt="Back Image">
+      </div>
+    </div>
+
+    <div class="leaderboard" id="leaderboard">
+      <h2>🏆 Leaderboard 🏆</h2>
+      <p>Your moves: <span id="current-moves">0</span></p>
+      <p>Time: <span id="leaderboard-time">00:00</span></p>
+      <div id="scores"></div>
+      <button class="button" id="restart-button">Restart</button>
+    </div>
+    <script src="../../js/game-levels.js/medium-level.js"></script>
+    <script src="../../js/game-setting-js/setting.js"></script>
 </body>
 
 </html>

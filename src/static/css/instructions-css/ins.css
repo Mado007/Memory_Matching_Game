@@ -5,7 +5,11 @@
     color: white;
 }
 body{
-    background-color: black;
+    /* background-color: black; */
+    background-image: url("../../../assets/images/game-icon/bg5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 .container {
     display: flex;
@@ -13,14 +17,97 @@ body{
     align-items: center;
     padding: 40px;
 }
-.ins-vol{
+.ins-container{
     padding: 40px;
-    border: 2px solid white;
+    border: 3px solid rgb(198, 42, 159);
     width: 50%;
     box-shadow:0 0 5px rgba(203, 252, 255, 0.989),
     0 0 5px rgba(203, 252, 255, 0.989),
     0 0 5px rgba(203, 252, 255, 0.989),
     0 0 10px rgba(203, 252, 255, 0.989);
     border-radius: 10px;
-    background-color: rgba(17, 45, 69, 0.989);
+    background-color: rgba(53, 17, 69, 0.795);
+    margin-bottom: 20px;
+}
+.ins >p {
+    text-align: justify;
+    line-height: 25px;
+    margin-bottom: 10px;
+    font-family: "Teko", serif;
+    font-optical-sizing: auto;
+    font-size: 24px;
+}
+.ins > h1{
+    font-family: "Sixtyfour", serif;
+    margin-bottom: 20px;
+}
+.ins{
+    margin-bottom: 20px;
+}
+.ins-container > a {
+    text-decoration: none;
+    color: rgb(62, 3, 53);
+    /* background-color: rgba(203, 252, 255, 0.989); */
+    border: none;
+    border-radius: 5px;
+    font-size: 28px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa3R1ygLmsfebDcVaLpDzztGt3-rv6DTpEqg&s");
+    background-position: center center;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    
+    
+}
+
+.ins-container > a:hover{
+color:rgb(239, 48, 208);
+}
+
+/* media query */
+/* General styles remain unchanged */
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .ins-container {
+        width: 90%; /* Adjust the width for smaller screens */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .ins > p {
+        font-size: 20px; /* Decrease font size */
+        line-height: 22px; /* Adjust line height */
+    }
+
+    .ins > h1 {
+        font-size: 28px; /* Decrease font size */
+    }
+
+    .ins-container > a {
+        font-size: 20px; /* Decrease button font size */
+        padding: 8px; /* Reduce button padding */
+    }
+}
+
+/* Additional media query for very small screens */
+@media (max-width: 480px) {
+    .ins-container {
+        width: 100%; /* Full width for very small screens */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .ins > p {
+        font-size: 18px; /* Further decrease font size */
+    }
+
+    .ins > h1 {
+        font-size: 24px; /* Further decrease font size */
+    }
+
+    .ins-container > a {
+        font-size: 18px; /* Further decrease button font size */
+    }
 }

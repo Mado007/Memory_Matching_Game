@@ -87,8 +87,6 @@ function endGame() {
   showLeaderboard(currentScore);
 }
 
-
-
 // Show leaderboard
 function showLeaderboard(currentScore) {
   document.getElementById("current-moves").textContent = currentScore.moves;
@@ -106,8 +104,6 @@ function showLeaderboard(currentScore) {
   leaderboard.style.display = "block"; // Show the leaderboard
   leaderboard.style.visibility = "visible"; 
 }
-
-
 
 // Shuffle cards
 function shuffleCards() {

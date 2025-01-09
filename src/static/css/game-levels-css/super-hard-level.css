@@ -2,28 +2,51 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+    font-family: "Teko", serif;
+    font-size: 25px;
+  }
 body{
-    background-image: url(../../../assets/images/game-icon/background3.jpg);
-    background-size:contain;
-
+    background-image: url(../../../assets/images/game-icon/super-hard-background/test.jpg);
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; 
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
 }
 .info{
     display: flex;
     justify-content: space-between;
     width: 600px;
     margin: auto;
-    background-color: rgba(16, 16, 205, 0.838);
+    background-color: rgba(167, 168, 192, 0.882);
     padding: 20px;
     margin-top: 10px ;
     margin-bottom: 20px;
     border-radius: 5px;
-    font-family: sans-serif;
 }
-.playerName{
-    text-align: center;
-}
-
+/* audio control icon */
+.audio-control {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+    margin-left: 100px;
+    
+  }
+  /* Styling for the icon image mute*/
+  .audio-icon {
+    width: 40px; 
+    height: 40px; 
+    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(4632%) hue-rotate(200deg) brightness(90%) contrast(85%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .audio-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(38%) sepia(10%) saturate(6742%) hue-rotate(207deg) brightness(91%) contrast(85%);
+  }
+  
 .game-container{
     height: 500px;
     width: 1000px;
@@ -34,12 +57,12 @@ body{
     display: grid;
     grid-template-columns: repeat(12 , 1fr); 
     gap:3px;
-    background-color: rgba(16, 16, 205, 0.493);
+    background-color: rgba(39, 39, 94, 0.773);
 }
 .game-container .game-block{
-    width: 55px;
+    width: 70px;
     height: 55px ;
-    background-color: rgba(3, 3, 40, 0.882);
+    background-color: rgb(8, 8, 58);
     border-radius: 5px;
     transition: transform 0.5s;
     cursor: pointer;
@@ -54,8 +77,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
 }
 .game-container .game-block .back{
     transform: rotateY(180deg);

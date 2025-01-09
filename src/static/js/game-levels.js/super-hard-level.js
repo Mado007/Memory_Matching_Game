@@ -73,8 +73,8 @@ function checkMatch() {
 }
 // End the game
 function endGame() {
-  stopTimer(); // Stop the timer
-  // Capture the elapsed time from the timer display
+    stopTimer(); // Stop the timer
+    // Capture the elapsed time from the timer display
     const elapsedTime = document.getElementById("game-time").textContent;
     // Create the current score object
     const currentScore = { moves, time: elapsedTime };
@@ -85,29 +85,25 @@ function endGame() {
     localStorage.setItem("scores", JSON.stringify(scores));
     // Show the leaderboard with the current score
     showLeaderboard(currentScore);
-}
-
-
+  }
 
 // Show leaderboard
 function showLeaderboard(currentScore) {
     document.getElementById("current-moves").textContent = currentScore.moves;
     document.getElementById("leaderboard-time").textContent = currentScore.time;
-
+  
     const scoresContainer = document.getElementById("scores");
     scoresContainer.innerHTML = ""; // Clear previous scores
-
+  
     scores.slice(0, 5).forEach((score, index) => {
         const scoreItem = document.createElement("p");
         scoreItem.textContent = `#${index + 1} - Moves: ${score.moves}, Time: ${score.time}`;
         scoresContainer.appendChild(scoreItem);
     });
-
+  
     leaderboard.style.display = "block"; // Show the leaderboard
     leaderboard.style.visibility = "visible"; 
-}
-
-
+  }
 
 // Shuffle cards
 function shuffleCards() {
@@ -126,29 +122,29 @@ document.getElementById("restart-button").addEventListener("click", () => {
     matchedCards = [];
     flippedCards = [];
     document.querySelector(".tries span").textContent = moves;
-    // Hide leaderboard
+  // Hide leaderboard
     leaderboard.style.display = "none"; 
-    // Ensure it's not visible
+  // Ensure it's not visible
     leaderboard.style.visibility = "hidden"; 
     leaderboard.style.opacity = "0";
-
+  
     cards.forEach((card) => card.classList.remove("is-flipped"));
     shuffleCards();
-    // Reset timer
+  // Reset timer
     clearInterval(timerInterval); 
-    // Start fresh timer
+  // Start fresh timer
     startTimer(); 
-});
-
-// Start the game
-function startGame() {
-    moves = 0;
-    matchedCards = [];
-    flippedCards = [];
-    document.querySelector(".tries span").textContent = moves;
-    leaderboard.style.display = "none";
-    shuffleCards();
-    startTimer();
-}
-
-startGame();
+  });
+  
+  // Start the game
+  function startGame() {
+      moves = 0;
+      matchedCards = [];
+      flippedCards = [];
+      document.querySelector(".tries span").textContent = moves;
+      leaderboard.style.display = "none";
+      shuffleCards();
+      startTimer();
+  }
+  
+  startGame();

@@ -1,113 +1,126 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: white;
 }
-body{
-    /* background-color: black; */
-    background-image: url("../../../assets/images/game-icon/bg5.jpg");
+body {
+    background-image: url("../../../assets/images/game-icon/bg5.webp");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-}
-.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    font-family: Arial, sans-serif;
 }
-.ins-container{
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+    max-width: 800px;
+}
+.ins-container {
     padding: 40px;
     border: 3px solid rgb(198, 42, 159);
-    width: 50%;
-    box-shadow:0 0 5px rgba(203, 252, 255, 0.989),
-    0 0 5px rgba(203, 252, 255, 0.989),
-    0 0 5px rgba(203, 252, 255, 0.989),
-    0 0 10px rgba(203, 252, 255, 0.989);
+    width: 100%;
+    box-shadow: 0 0 5px rgba(203, 252, 255, 0.989), 0 0 10px rgba(203, 252, 255, 0.989);
     border-radius: 10px;
     background-color: rgba(53, 17, 69, 0.795);
-    margin-bottom: 20px;
+    text-align: center;
 }
-.ins >p {
+.ins {
+    margin-bottom: 30px;
+}
+.ins > p {
     text-align: justify;
-    line-height: 25px;
-    margin-bottom: 10px;
+    line-height: 30px;
+    margin-bottom: 15px;
     font-family: "Teko", serif;
-    font-optical-sizing: auto;
-    font-size: 24px;
+    font-size: 25px;
+    cursor: default;
 }
-.ins > h1{
+.ins > h1 {
     font-family: "Sixtyfour", serif;
     margin-bottom: 20px;
-}
-.ins{
-    margin-bottom: 20px;
+    font-size: 3vw;
+    color: #ffc9f0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(239, 48, 208, 0.8);
+    animation: fadeInScale 1s ease-in-out;
+    cursor: default;
 }
 .ins-container > a {
     text-decoration: none;
-    color: rgb(62, 3, 53);
-    /* background-color: rgba(203, 252, 255, 0.989); */
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 28px;
-    padding: 10px;
+    padding: 12px 24px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa3R1ygLmsfebDcVaLpDzztGt3-rv6DTpEqg&s");
-    background-position: center center;
-    color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    
-    
+    transition: background-color 0.3s ease, transform 0.9s ease;
+    background: linear-gradient(20deg, rgba(97, 160, 163, 0.881), rgba(239, 48, 208, 0.8));
+    box-shadow: 0 0 10px rgba(239, 48, 208, 0.6);
+    position: relative;
+    overflow: hidden;
+    font-weight: 1000;
+}
+.ins-container > a:hover {
+    background: rgba(152, 187, 188, 0.9);
+    color: rgb(172, 5, 144);
+    transition: color 0.8s ease;
+    box-shadow: 0 4px 10px rgba(239, 48, 208, 0.6);
+}
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-.ins-container > a:hover{
-color:rgb(239, 48, 208);
-}
-
-/* media query */
-/* General styles remain unchanged */
-
-/* Media query for smaller screens */
+/* Responsive Design */
 @media (max-width: 768px) {
     .ins-container {
-        width: 90%; /* Adjust the width for smaller screens */
-        padding: 20px; /* Reduce padding */
+        width: 90%;
+        padding: 20px;
     }
 
     .ins > p {
-        font-size: 20px; /* Decrease font size */
-        line-height: 22px; /* Adjust line height */
+        font-size: 20px;
+        line-height: 22px;
     }
 
     .ins > h1 {
-        font-size: 28px; /* Decrease font size */
+        font-size: 28px;
     }
 
     .ins-container > a {
-        font-size: 20px; /* Decrease button font size */
-        padding: 8px; /* Reduce button padding */
+        font-size: 20px;
+        padding: 10px;
     }
 }
 
-/* Additional media query for very small screens */
 @media (max-width: 480px) {
     .ins-container {
-        width: 100%; /* Full width for very small screens */
-        padding: 10px; /* Further reduce padding */
+        width: 100%;
+        padding: 15px;
     }
 
     .ins > p {
-        font-size: 18px; /* Further decrease font size */
+        font-size: 18px;
     }
 
     .ins > h1 {
-        font-size: 24px; /* Further decrease font size */
+        font-size: 24px;
     }
 
     .ins-container > a {
-        font-size: 18px; /* Further decrease button font size */
+        font-size: 18px;
+        padding: 8px;
     }
 }

@@ -6,10 +6,19 @@
 }
 body{
     background-color: black;
-    background-image: url("../../../assets/images/game-icon/bg5.jpg");
+    background-image: url("../../../assets/images/game-icon/bg5.webp");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    background-position: center; 
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+label{
+    font-size: 25px;
+    color: #ffc9f0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(239, 48, 208, 0.8);
+    cursor: default;
 }
 .container {
     display: flex;
@@ -34,7 +43,6 @@ body{
     -webkit-appearance: none; /* Remove default styling in WebKit browsers */
     width: 90%; /* Full width */
     height: 15px; /* Height of the slider */
-    /* background: #c0e105;  */
     background: rgb(250,5,5);
     background: linear-gradient(274deg, rgba(250,5,5,1) 0%, rgba(215,126,8,1) 32%, rgba(240,241,4,1) 100%);
     border-radius: 5px; /* Round corners */
@@ -74,77 +82,82 @@ body{
     background: #ddd; /* Background color */
     border-radius: 5px; /* Round corners */
     height: 15px; /* Height of the track */
+
 }
-
-
-
 .settings-container > h1{
     font-family: "Sixtyfour", serif;
-    margin-bottom: 40px;
-}
-.ins-container > a {
-    text-decoration: none;
-    color: rgb(62, 3, 53);
-    /* background-color: rgba(203, 252, 255, 0.989); */
-    border: none;
-    border-radius: 5px;
-    font-size: 24px;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    background-image: url("../../../assets/images/game-icon/buttonbg1.jpg");
-}
-#muteButton {
-    background-color: rgba(203, 252, 255, 0.8);
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    margin-top: 20px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
     margin-bottom: 20px;
+    font-size: 3.5vw;
+    color: #ffc9f0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(239, 48, 208, 0.8);
+    animation: fadeInScale 1s ease-in-out;
+    cursor: default;
+}
+/* Button Styles */
+#muteButton {
+    font-family: "Teko", serif;
+    color: #f6f3f3;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 24px;
+    margin-top: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.9s ease;
+    background: linear-gradient(20deg, rgba(97, 160, 163, 0.881), rgba(239, 48, 208, 0.8));
+    box-shadow: 0 0 10px rgba(239, 48, 208, 0.6);
+}
+
+#muteButton:hover {
+    background: rgba(152, 187, 188, 0.9);
+    color: rgb(172, 5, 144);
+    transform: scale(1.05);
+    transition: color 0.8s ease;
+    box-shadow: 0 4px 10px rgba(239, 48, 208, 0.6);
+}
+#continueButton {
+    font-family: "Teko", serif;
+    color: #f6f3f3;
+    text-decoration: none;
+    border: none;
+    border-radius: 15px;
+    padding: 1% 10%;
+    margin-top: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.9s ease;
+    background: linear-gradient(20deg, rgba(97, 160, 163, 0.881), rgba(239, 48, 208, 0.8));
+    box-shadow: 0 0 10px rgba(239, 48, 208, 0.6);
+    animation: fadeInScale 1s ease-in-out;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#continueButton:hover {
+    background: rgba(152, 187, 188, 0.9);
+    color: rgb(172, 5, 144);
+    transform: scale(1.05);
+    transition: color 0.8s ease;
+    box-shadow: 0 4px 10px rgba(239, 48, 208, 0.6);
 }
 
 #muteButton:hover {
     background-color: rgba(203, 252, 255, 1);
 }
 
-.mute {
-    background-color: #f44336; 
-}
-
-.unmute {
-    background-color: #4caf50; 
-}
-
-#continueButton {
-    background: rgb(220,5,107);
-background: linear-gradient(274deg, rgba(220,5,107,1) 0%, rgba(111,4,241,1) 100%);
-    color: rgb(255, 251, 251);
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 22px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    text-decoration: none;
-    margin-top:30px;
-}
-
-#continueButton:hover {
-    background: rgb(111,4,241);
-    background: linear-gradient(274deg, rgba(111,4,241,1) 1%, rgba(220,5,107,1) 59%);
-}
 .continue{
     text-align: center;
 }
 
-
-/* media query */
-
-/* Media query for smaller screens */
 @media (max-width: 768px) {
     .settings-container {
         width: 90%; /* Adjust width for smaller screens */
@@ -160,5 +173,25 @@ background: linear-gradient(274deg, rgba(220,5,107,1) 0%, rgba(111,4,241,1) 100%
     #continueButton {
         font-size: 16px; /* Decrease button font size */
         padding: 8px 12px; /* Reduce padding */
+    }
+}
+@media (max-width: 480px) {
+    .settings-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .settings-container > h1 {
+        font-size: 24px;
+    }
+
+    #muteButton,
+    #continueButton {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .volume-slider {
+        height: 8px;
     }
 }

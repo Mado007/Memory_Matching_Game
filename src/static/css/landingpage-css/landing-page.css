@@ -1,13 +1,20 @@
 body {
   margin: 0;
-  font-family: "Sixtyfour", serif;
+  font-family: Sixtyfour, serif;
   overflow: hidden;
   background: linear-gradient(135deg, #414752, #567bb9); /* Smooth gradient background */
   color: #f0f0f0;
   background-image:url("../../../assets/images/game-icon/Screenshot 2025-01-11 171937.png");
   background-size:cover;
 }
-
+@font-face {
+  font-family: Sixtyfour;
+  src: url(../../../assets/fonts/Sixtyfour-Regular-VariableFont_BLED\,SCAN.ttf);
+}
+@font-face {
+  font-family: teko;
+  src: url(../../../assets/fonts/Jersey10-Regular.ttf);
+}
 .container {
   position: relative;
   display: flex;
@@ -22,7 +29,7 @@ body {
 
 h1 {
   margin-bottom: 5%;
-  font-size: 5vw;
+  font-size: 6vw;
   text-shadow: 5px 5px 3px #5d033cbe;
   color: rgba(255, 255, 255, 0.908);
   cursor: default; 
@@ -32,9 +39,10 @@ h1 {
 }
 
 button {
-  padding: 1.5% 8%;
-  font-size: 4vw;
-  font-family: "teko,sans-serif";
+  padding: 1% 6%;
+  font-size: 2vw;
+  font-weight: 900;
+  font-family: Sixtyfour,sans-serif;
   /* color: #ffffff; */
   background: linear-gradient(90deg, #007bff, #111e21);
   border: none;
@@ -91,13 +99,13 @@ button:active {
 /* H1 Animation */
 @keyframes h1Glow {
   0% {
-    text-shadow: 5px 5px 4px rgba(255, 255, 255, 0.981);
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.981);
   }
   50% {
     text-shadow: 5px 5px 3px rgb(174, 4, 247), 0 4px 4px rgb(77, 2, 105);
   }
   100% {
-    text-shadow: 5px 5px 4px rgba(237, 235, 239, 0.923);
+    text-shadow: 3px 3px 3px rgba(237, 235, 239, 0.923);
   }
 }
 /* button color Animation */

@@ -17,10 +17,612 @@
   <meta name="apple-mobile-web-app-title" content="Flip Frenzy" />
   <link rel="manifest" href="../../../assets/images/site-icon/site.webmanifest" />
   <title>Hard-Level</title>
+  <link rel="stylesheet" href="../../css/game-levels-css/hard-level.css">
 </head>
 
 <body>
-  <h1>hard-level</h1>
+  <!-- <h1> HARD-Level</h1> -->
+
+  <audio id="flipSound" src="../../../assets/sounds/card-flip-sound.wav"></audio>
+  <audio id="matchSound" src="../../../assets/sounds/matched.wav"></audio>
+  <div class="info">
+    <div class="playerName">
+      <p>Time: <span id="game-time">00:00</span></p>
+    </div>
+    <div class="audio-control">
+      <img src="../../../assets/images/volume-icon/volume-up.svg" class="audio-icon" alt="Volume Icon">
+    </div>
+    <div class="tries">
+      Moves: <span>0</span>
+    </div>
+  </div>
+
+  <div class="game-container" id="game-container">
+    <!-- card 1 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🥶</p>
+      </div>
+    </div>
+    <!-- card 2 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🤥</p>
+      </div>
+    </div>
+    <!-- card 3 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>👺</p>
+      </div>
+    </div>
+    <!-- card 4 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🥹</p>
+      </div>
+    </div>
+    <!-- card 5 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🤩</p>
+      </div>
+    </div>
+    <!-- card 6 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🤫</p>
+      </div>
+    </div>
+    <!-- card 7-->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>😒</p>
+      </div>
+    </div>
+    <!-- card 8 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>😏</p>
+      </div>
+    </div>
+    <!-- card 9 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🤩</p>
+      </div>
+    </div>
+    <!-- card 10 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>😎</p>
+      </div>
+    </div>
+    <!-- card 11 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🧙‍♂️</p>
+      </div>
+    </div>
+    <!-- card 12 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🦢</p>
+      </div>
+    </div>
+    <!-- card 13 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🦄</p>
+      </div>
+    </div>
+    <!-- card 14 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🐉</p>
+      </div>
+    </div>
+    <!-- card 15 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🧞‍♀️</p>
+      </div>
+    </div>
+    <!-- card 16 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🧜‍♂️</p>
+      </div>
+    </div>
+    <!-- card 17 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🧚‍♀️</p>
+      </div>
+    </div>
+    <!-- card 18 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🦷</p>
+      </div>
+    </div>
+    <!-- card 19 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🦴</p>
+      </div>
+    </div>
+    <!-- card 20 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🎭</p>
+      </div>
+    </div>
+    <!-- card 21 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>👾</p>
+      </div>
+    </div>
+    <!-- card 22 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>💀</p>
+      </div>
+    </div>
+    <!-- card 23 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🤖</p>
+      </div>
+    </div>
+    <!-- card 24 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🧝‍♂️</p>
+      </div>
+    </div>
+    <!-- card 25 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🤹‍♂️</p>
+      </div>
+    </div>
+    <!-- card 26 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🧩</p>
+      </div>
+    </div>
+    <!-- card 27 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🛡️</p>
+      </div>
+    </div>
+    <!-- card 28 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>⚔️</p>
+      </div>
+    </div>
+    <!-- card 29 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>📜</p>
+      </div>
+    </div>
+    <!-- card 30 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🕯️</p>
+      </div>
+    </div>
+    <!-- card 31 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🪓</p>
+      </div>
+    </div>
+    <!-- card 32 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🎨</p>
+      </div>
+    </div>
+    <!-- card 1 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🥶</p>
+      </div>
+    </div>
+    <!-- card 2 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🤥</p>
+      </div>
+    </div>
+    <!-- card 3 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>👺</p>
+      </div>
+    </div>
+    <!-- card 4 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🥹</p>
+      </div>
+    </div>
+    <!-- card 5 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🤩</p>
+      </div>
+    </div>
+    <!-- card 6 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🤫</p>
+      </div>
+    </div>
+    <!-- card 7-->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>😒</p>
+      </div>
+    </div>
+    <!-- card 8 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>😏</p>
+      </div>
+    </div>
+    <!-- card 9 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🤩</p>
+      </div>
+    </div>
+    <!-- card 10 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>😎</p>
+      </div>
+    </div>
+    <!-- card 11 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🧙‍♂️</p>
+      </div>
+    </div>
+    <!-- card 12 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🦢</p>
+      </div>
+    </div>
+    <!-- card 13 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🦄</p>
+      </div>
+    </div>
+    <!-- card 14 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🐉</p>
+      </div>
+    </div>
+    <!-- card 15 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🧞‍♀️</p>
+      </div>
+    </div>
+    <!-- card 16 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🧜‍♂️</p>
+      </div>
+    </div>
+    <!-- card 17 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🧚‍♀️</p>
+      </div>
+    </div>
+    <!-- card 18 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🦷</p>
+      </div>
+    </div>
+    <!-- card 19 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🦴</p>
+      </div>
+    </div>
+    <!-- card 20 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🎭</p>
+      </div>
+    </div>
+    <!-- card 21 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>👾</p>
+      </div>
+    </div>
+    <!-- card 22 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>💀</p>
+      </div>
+    </div>
+    <!-- card 23 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🤖</p>
+      </div>
+    </div>
+    <!-- card 24 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🧝‍♂️</p>
+      </div>
+    </div>
+    <!-- card 25 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🤹‍♂️</p>
+      </div>
+    </div>
+    <!-- card 26 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🧩</p>
+      </div>
+    </div>
+    <!-- card 27 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🛡️</p>
+      </div>
+    </div>
+    <!-- card 28 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>⚔️</p>
+      </div>
+    </div>
+    <!-- card 29 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>📜</p>
+      </div>
+    </div>
+    <!-- card 30 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🕯️</p>
+      </div>
+    </div>
+    <!-- card 31 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🪓</p>
+      </div>
+    </div>
+    <!-- card 32 -->
+    <div class="game-block">
+      <div class="face front">
+        ?
+      </div>
+      <div class=" face back">
+        <p>🎨</p>
+      </div>
+    </div>
+  </div>
+  <div class="leaderboard" id="leaderboard">
+    <h2>🏆 Leaderboard 🏆</h2>
+    <p>Your moves: <span id="current-moves">0</span></p>
+    <p>Time: <span id="leaderboard-time">00:00</span></p>
+    <div id="scores"></div>
+    <button class="button" id="restart-button">Restart</button>
+  </div>
+  <script src="../../js/game-levels.js/hard.js"></script>
   <script src="../../js/game-setting-js/setting.js"></script>
 </body>
 

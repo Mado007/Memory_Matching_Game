@@ -4,17 +4,914 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Jersey+10&family=Sixtyfour&family=Teko:wght@300..700&display=swap"
+    rel="stylesheet">
   <link rel="icon" type="image/png" href="../../../assets/images/site-icon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="../../../assets/images/site-icon/favicon.svg" />
   <link rel="shortcut icon" href="../../../assets/images/site-icon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/images/site-icon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Flip Frenzy" />
   <link rel="manifest" href="../../../assets/images/site-icon/site.webmanifest" />
-  <title>Super Hard-Level</title>
+  <link rel="stylesheet" href="../../css/game-levels-css/super-hard-level.css">
+
+  <title>Super Hard Level</title>
 </head>
 
 <body>
-  <h1>very-hard-level</h1>
+  <audio id="flipSound" src="../../../assets/sounds/card-flip-sound.wav"></audio>
+  <audio id="matchSound" src="../../../assets/sounds/matched.wav"></audio>
+  <div class="info">
+    <div class="playerName">
+      <p>Time: <span id="game-time">00:00</span></p>
+    </div>
+    <div class="audio-control">
+      <img src="../../../assets/images/volume-icon/volume-up.svg" class="audio-icon" alt="Volume Icon">
+    </div>
+    <div class="tries">
+      Moves: <span>0</span>
+    </div>
+  </div>
+
+  <div class="game-container">
+    <!-- card 1 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/01.webp" alt="">
+      </div>
+    </div>
+    <!-- card 2 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/02.webp" alt="">
+      </div>
+    </div>
+    <!-- card 3 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/03.webp" alt="">
+      </div>
+    </div>
+    <!-- card 4 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/04.webp" alt="">
+      </div>
+    </div>
+    <!-- card 5 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/05.webp" alt="">
+      </div>
+    </div>
+    <!-- card 6 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/06.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/07.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/08.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/09.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/10.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/11.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/12.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/13.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/14.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/15.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/16.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/17.webp" alt="">
+      </div>
+    </div>
+    <!-- card 2 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/18.webp" alt="">
+      </div>
+    </div>
+    <!-- card 3 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/19.webp" alt="">
+      </div>
+    </div>
+    <!-- card 4 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/20.webp" alt="">
+      </div>
+    </div>
+    <!-- card 5 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/21.webp" alt="">
+      </div>
+    </div>
+    <!-- card 6 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/22.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/23.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/24.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/25.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/26.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/27.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/28.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/29.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/30.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/31.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/32.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/33.webp" alt="">
+      </div>
+    </div>
+    <!-- card 2 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/34.webp" alt="">
+      </div>
+    </div>
+    <!-- card 3 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/35.webp" alt="">
+      </div>
+    </div>
+    <!-- card 4 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/36.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/37.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/38.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/39.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/40.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/41.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/42.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/43.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/44.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/45.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/46.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/47.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/48.webp" alt="">
+      </div>
+    </div>
+
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/01.webp" alt="">
+      </div>
+    </div>
+
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/02.webp" alt="">
+      </div>
+    </div>
+    <!-- card 3 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/03.webp" alt="">
+      </div>
+    </div>
+    <!-- card 4 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/04.webp" alt="">
+      </div>
+    </div>
+    <!-- card 5 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/05.webp" alt="">
+      </div>
+    </div>
+    <!-- card 6 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/06.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/07.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/08.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/09.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/10.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/11.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/12.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/13.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/14.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/15.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/16.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/17.webp" alt="">
+      </div>
+    </div>
+    <!-- card 2 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/18.webp" alt="">
+      </div>
+    </div>
+    <!-- card 3 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/19.webp" alt="">
+      </div>
+    </div>
+    <!-- card 4 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/20.webp" alt="">
+      </div>
+    </div>
+    <!-- card 5 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/21.webp" alt="">
+      </div>
+    </div>
+    <!-- card 6 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/22.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/23.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/24.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/25.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/26.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/27.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/28.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/29.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/30.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/31.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/32.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/33.webp" alt="">
+      </div>
+    </div>
+    <!-- card 2 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/34.webp" alt="">
+      </div>
+    </div>
+    <!-- card 3 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/35.webp" alt="">
+      </div>
+    </div>
+    <!-- card 4 -->
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/36.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/37.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/38.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/39.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/40.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/41.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/42.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/43.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/44.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/45.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/46.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/47.webp" alt="">
+      </div>
+    </div>
+
+    <div class="game-block">
+      <div class="face front">
+        !
+      </div>
+      <div class=" face back">
+        <img src="../../../assets/images/game-icon/super-hard/48.webp" alt="">
+      </div>
+    </div>
+
+  </div>
+  <div class="leaderboard" id="leaderboard">
+    <h2>🏆 Leaderboard 🏆</h2>
+    <p>Your moves: <span id="current-moves">0</span></p>
+    <p>Time: <span id="leaderboard-time">00:00</span></p>
+    <div id="scores"></div>
+    <button class="button" id="restart-button">Restart</button>
+  </div>
+  <script src="../../js/game-levels.js/super-hard-level.js"></script>
   <script src="../../js/game-setting-js/setting.js"></script>
 </body>
 

@@ -12,10 +12,11 @@ body {
 }
 
 h1 {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-size: 4vw;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   animation: fadeIn 1.5s ease-in-out;
+  cursor: default;
 }
 
 .container {
@@ -32,30 +33,117 @@ h1 {
   padding: 50px;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.8s ease;
+  transition: transform 0.8s ease, background 0.8s ease, box-shadow 0.8s ease;
   cursor: pointer;
   font-size: 1.2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+.BOXS-OFITEMS:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.BOXS-OFITEMS:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.BOXS-OFITEMS:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.BOXS-OFITEMS:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.BOXS-OFITEMS::before,
+.BOXS-OFITEMS::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #ffffff 0%, rgba(255, 255, 255, 0) 90%);
+  border-radius: 50%;
+  opacity: 0;
+  animation: sparkle 1s infinite;
+  pointer-events: none;
+}
+
+.BOXS-OFITEMS::before {
+  top: 20%;
+  left: 30%;
+  animation-delay: 0s;
+}
+
+.BOXS-OFITEMS::after {
+  top: 60%;
+  left: 70%;
+  animation-delay: 0.5s;
 }
 
 .BOXS-OFITEMS:hover {
   background: linear-gradient(135deg, #7643a083, #d72638);
-  transform: translateY(-5px);
+  transform: translateY(-10px) rotateY(10deg);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
-
+.BOXS-OFITEMS:hover::before,
+.BOXS-OFITEMS:hover::after {
+  opacity: 1;
+}
 .BOXS-OFITEMS h3 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .BOXS-OFITEMS p {
   margin: 10px 0 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
+/* Keyframes for Fade-In Slide Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 2;
+    transform: translateY(0);
+  }
+}
 
+/* Keyframes for Header Fade-In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(2) translate(10px, -10px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) translate(-20px, -20px);
+  }
+}
 @media (max-width: 768px) {
-  
   .container {
     grid-template-columns: 1fr;
     gap: 30px;

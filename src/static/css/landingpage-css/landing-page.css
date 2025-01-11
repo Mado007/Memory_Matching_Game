@@ -4,6 +4,8 @@ body {
   overflow: hidden;
   background: linear-gradient(135deg, #414752, #567bb9); /* Smooth gradient background */
   color: #f0f0f0;
+  background-image:url("../../../assets/images/game-icon/Screenshot 2025-01-11 171937.png");
+  background-size:cover;
 }
 
 .container {
@@ -20,26 +22,37 @@ body {
 
 h1 {
   margin-bottom: 5%;
-  font-size: 6.5vw;
-  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  font-size: 5vw;
+  text-shadow: 5px 5px 3px #5d033cbe;
   color: rgba(255, 255, 255, 0.908);
   cursor: default; 
-  animation: fadeInDown 1.9s ease-in-out;
+  animation: fadeInDown 1.9s ease-in-out , h1Glow 2s infinite ease-in-out ;
+  transition: all 0.8s ease;
+  display: inline;
 }
 
 button {
   padding: 1.5% 8%;
   font-size: 4vw;
-  color: #ffffff;
+  font-family: "teko,sans-serif";
+  /* color: #ffffff; */
   background: linear-gradient(90deg, #007bff, #111e21);
   border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.8s ease;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  animation: fadeInDown 1.9s ease-in-out, pulseGlow 2s infinite ease-in-out;
+  animation: fadeInDown 1.9s ease-in-out, pulseGlow 2s infinite ease-in-out, pulseColor 2s infinite ease-in-out;
 }
-
+.blue{
+  color:#007bff
+}
+.yellow{
+  color:rgb(245, 246, 241);
+}
+.red{
+  color:rgb(217, 219, 216);
+}
 button:hover {
   background: linear-gradient(90deg, #0056b3, #007bff);
   transform: scale(1.1);
@@ -73,6 +86,30 @@ button:active {
   }
   100% {
     box-shadow: 0 5px 10px rgba(237, 235, 239, 0.923);
+  }
+}
+/* H1 Animation */
+@keyframes h1Glow {
+  0% {
+    text-shadow: 5px 5px 4px rgba(255, 255, 255, 0.981);
+  }
+  50% {
+    text-shadow: 5px 5px 3px rgb(174, 4, 247), 0 4px 4px rgb(77, 2, 105);
+  }
+  100% {
+    text-shadow: 5px 5px 4px rgba(237, 235, 239, 0.923);
+  }
+}
+/* button color Animation */
+@keyframes pulseColor {
+  0% {
+    color:  rgba(255, 255, 255, 0.981);
+  }
+  50% {
+    color:  rgb(174, 4, 247);
+  }
+  100% {
+    color: rgba(237, 235, 239, 0.923);
   }
 }
 

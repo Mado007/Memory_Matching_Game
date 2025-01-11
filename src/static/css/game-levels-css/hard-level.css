@@ -14,25 +14,68 @@ body{
     height: 100vh; 
     overflow: hidden;
 }
-@font-face {
-  font-family: Sixtyfour;
-  src: url(../../../assets/fonts/Sixtyfour-Regular-VariableFont_BLED\,SCAN.ttf);
-}
-@font-face {
-  font-family: teko;
-  src: url(../../../assets/fonts/Jersey10-Regular.ttf);
+.info{
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  height: 60px;
+  margin: auto;
+  background-color: rgba(167, 168, 192, 0.882);
+  padding: 10px;
+  margin-top: 10px ;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
 
-.info{
-    display: flex;
-    justify-content: space-between;
-    width: 600px;
-    margin: auto;
-    background-color: rgba(167, 168, 192, 0.882);
-    padding: 20px;
-    margin-top: 20px ;
-    margin-bottom: 20px;
-    border-radius: 5px;
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.restart{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 55px;
+  margin: auto;
+  margin-right:260px;
+  background-color: rgba(167, 168, 192, 0.882);
+  margin-top: 10px ;
+  margin-bottom: 20px;
+  border: 1px solid rgba(167, 168, 192, 0.882) ;
+  border-radius: 5px;
+  text-align: center;
+}
+.restart img{
+  width: 35px; 
+  height: 35px;
+  filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(4632%) hue-rotate(200deg) brightness(90%) contrast(85%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.Back {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 55px;
+  margin: auto;
+  margin-left:260px; 
+  background-color: rgba(167, 168, 192, 0.882);
+  cursor: pointer;
+  margin-top: 10px ;
+  margin-bottom: 10px;
+  border: 1px solid rgba(167, 168, 192, 0.882) ;
+  border-radius: 5px;
+  text-align: center;
+}
+.Back img{
+  width: 35px; 
+  height: 35px;
+  filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(4632%) hue-rotate(200deg) brightness(90%) contrast(85%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 /* audio control icon */
 .audio-control {

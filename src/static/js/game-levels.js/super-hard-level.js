@@ -8,6 +8,11 @@ const leaderboard = document.getElementById("leaderboard"); // Leaderboard modal
 const flipSound = document.getElementById("flipSound"); // the sound of flip card
 let scores = JSON.parse(localStorage.getItem("scores")) || []; // Get saved scores
 
+let restart = document.getElementById('restart')
+restart.addEventListener('click',()=>{
+    location.reload();
+});
+
 // Start the timer
 function startTimer() {
     startTime = Date.now();

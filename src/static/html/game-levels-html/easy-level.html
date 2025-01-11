@@ -15,12 +15,16 @@
     <link rel="stylesheet" href="../../css/game-levels-css/easy-level.css">
 </head>
 
-<body>
 
+<body>
     <!-- <h1>Easy-Level</h1> -->
     <audio id="flipSound" src="../../../assets/sounds/card-flip-sound.wav"></audio>
     <audio id="matchSound" src="../../../assets/sounds/matched.wav"></audio>
-    <div class="info">
+
+    <div class="header">
+        <a href="../all-levels-html/Leveldetermination.html" class="Back"> <img src="../../../assets/images/game-icon/back.png" alt=""> </a>
+
+        <div class="info">
         <div class="playerName">
             <p>Time: <span id="game-time">00:00</span></p>
         </div>
@@ -31,6 +35,10 @@
             Moves: <span>0</span>
         </div>
     </div>
+
+    <a href="" class="restart" id="restart"> <img src="../../../assets/images/game-icon/restart.png" alt=""> </a>
+
+</div>
 
 
     <div class="game-container" id="game-container">
@@ -179,11 +187,6 @@
             </div>
         </div>
     </div>
-    <div class="back">
-        <a id="backButton" href="../all-levels-html/Leveldetermination.html"
-            class="back-link">back</a>
-    </div>
-
     <div class="leaderboard" id="leaderboard">
         <h2>🏆 Leaderboard 🏆</h2>
         <p>Your moves: <span id="current-moves">0</span></p>
@@ -191,8 +194,6 @@
         <div id="scores"></div>
         <button class="button" id="restart-button">Restart</button>
     </div>
-    
-
     <script src="../../js/game-setting-js/setting.js"></script>
     <script src="../../js/game-levels.js/easy-level.js"></script>
 </body>

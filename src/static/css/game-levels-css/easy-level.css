@@ -15,6 +15,15 @@ body{
     overflow: hidden;
 
 }
+@font-face {
+    font-family: Sixtyfour;
+    src: url(../../../assets/fonts/Sixtyfour-Regular-VariableFont_BLED\,SCAN.ttf);
+  }
+  @font-face {
+    font-family: teko;
+    src: url(../../../assets/fonts/Jersey10-Regular.ttf);
+  }
+
 .info{
     display: flex;
     justify-content: space-between;

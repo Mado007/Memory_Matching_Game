@@ -4,8 +4,6 @@ body {
   overflow: hidden;
   background: linear-gradient(135deg, #414752, #567bb9); /* Smooth gradient background */
   color: #f0f0f0;
-  background-image:url("../../../assets/images/game-icon/Screenshot 2025-01-11 171937.png");
-  background-size:cover;
 }
 @font-face {
   font-family: Sixtyfour;

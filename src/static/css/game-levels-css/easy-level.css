@@ -15,6 +15,15 @@ body{
     overflow: hidden;
 
 }
+@font-face {
+    font-family: Sixtyfour;
+    src: url(../../../assets/fonts/Sixtyfour-Regular-VariableFont_BLED\,SCAN.ttf);
+  }
+  @font-face {
+    font-family: teko;
+    src: url(../../../assets/fonts/Jersey10-Regular.ttf);
+  }
+
 .info{
     display: flex;
     justify-content: space-between;
@@ -101,6 +110,42 @@ body{
     transform: rotateY(180deg);
 }
 
+/* back button */
+
+#backButton {
+    font-family: "Teko", serif;
+    color: #f6f3f3;
+    text-decoration: none;
+    border: none;
+    border-radius: 15px;
+    padding: 1% 5%;
+    margin-top: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.9s ease;
+    background: linear-gradient(20deg, rgba(97, 160, 163, 0.881), rgba(239, 48, 208, 0.8));
+    box-shadow: 0 0 10px rgba(239, 48, 208, 0.6);
+    animation: fadeInScale 1s ease-in-out;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#backButton:hover {
+    background: rgba(152, 187, 188, 0.9);
+    color: rgb(172, 5, 144);
+    transform: scale(1.05);
+    transition: color 0.8s ease;
+    box-shadow: 0 4px 10px rgba(239, 48, 208, 0.6);
+}
 /*leaderboard*/
 #leaderboard {
     position: fixed; 
@@ -117,9 +162,10 @@ body{
     max-width: 450px; 
     z-index: 1000; 
     display: none; 
-  }
-  
-  /* leaderboard h*/
+}
+
+
+/* leaderboard h*/
   #leaderboard h2 {
     font-size: 34px;
     color: #d1d627;

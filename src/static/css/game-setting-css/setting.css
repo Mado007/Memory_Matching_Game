@@ -39,6 +39,7 @@ label{
     padding: 40px;
     border: 2px solid white;
     width: 50%;
+    margin-top: 30px;
     box-shadow:0 0 5px rgba(203, 252, 255, 0.989),
     0 0 5px rgba(203, 252, 255, 0.989),
     0 0 5px rgba(203, 252, 255, 0.989),
@@ -95,9 +96,11 @@ label{
 }
 .settings-container > h1{
     font-family: "Sixtyfour", serif;
+    margin-top: 20px;
     margin-bottom: 20px;
     font-size: 3.5vw;
     color: #ffc9f0;
+    text-align: center;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(239, 48, 208, 0.8);
     animation: fadeInScale 1s ease-in-out;
     cursor: default;
@@ -108,7 +111,7 @@ label{
     color: #f6f3f3;
     border: none;
     border-radius: 15px;
-    padding: 10px 24px;
+    padding: 5px 15px;
     margin-top: 10px;
     font-size: 25px;
     cursor: pointer;
@@ -165,6 +168,7 @@ label{
 
 .continue{
     text-align: center;
+    margin-top: 30px;
 }
 
 @media (max-width: 768px) {

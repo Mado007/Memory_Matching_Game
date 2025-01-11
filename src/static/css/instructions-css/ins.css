@@ -12,15 +12,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
 }
 @font-face {
     font-family: Sixtyfour;
     src: url(../../../assets/fonts/Sixtyfour-Regular-VariableFont_BLED\,SCAN.ttf);
   }
   @font-face {
-    font-family: teko;
-    src: url(../../../assets/fonts/Jersey10-Regular.ttf);
+    font-family: jersy;
+    src: url(../../../assets/fonts/Teko-Regular.ttf);
   }
 
 .container {
@@ -47,8 +47,8 @@ body {
     text-align: justify;
     line-height: 30px;
     margin-bottom: 15px;
-    font-family: "Teko", serif;
-    font-size: 25px;
+    font-family: jersy, sans-serif , serif;
+    font-size: 28px;
     cursor: default;
 }
 .ins > h1 {
@@ -65,9 +65,9 @@ body {
     color: white;
     border: none;
     border-radius: 15px;
-    font-size: 28px;
+    font-size: 15px;
     padding: 12px 24px;
-    font-family: teko, arial, helvetica;
+    font-family: Sixtyfour , arial, helvetica;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.9s ease;
     background: linear-gradient(20deg, rgba(97, 160, 163, 0.881), rgba(239, 48, 208, 0.8));

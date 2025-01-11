@@ -2,8 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Teko", serif;
+    font-family: Teko , serif;
     font-size: 25px;
+  }
+@font-face {
+    font-family: teko;
+    src: url(../../../assets/fonts/Teko-Regular.ttf);
   }
 body{
     background-image: url(../../../assets/images/game-icon/super-hard-background/test.jpg);

@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Teko", serif;
+    font-size: 25px;
+  }
+body{
+    background-image: url(../../../assets/images/game-icon/super-hard-background/test.jpg);
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; 
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin: auto;
+    background-color: rgba(167, 168, 192, 0.882);
+    padding: 20px;
+    margin-top: 10px ;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+/* audio control icon */
+.audio-control {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+    margin-left: 100px;
+    
+  }
+  /* Styling for the icon image mute*/
+  .audio-icon {
+    width: 40px; 
+    height: 40px; 
+    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(4632%) hue-rotate(200deg) brightness(90%) contrast(85%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .audio-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(38%) sepia(10%) saturate(6742%) hue-rotate(207deg) brightness(91%) contrast(85%);
+  }
+  
+.game-container{
+    height: 500px;
+    width: 1000px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12 , 1fr); 
+    gap:3px;
+    background-color: rgba(39, 39, 94, 0.773);
+}
+.game-container .game-block{
+    width: 70px;
+    height: 55px ;
+    background-color: rgb(8, 8, 58);
+    border-radius: 5px;
+    transition: transform 0.5s;
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+.game-container .game-block .front{
+    font-size: 40px;
+    line-height: 55px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-container .game-block .back{
+    transform: rotateY(180deg);
+    background-color: rgba(3, 3, 40, 0.882);
+    border-radius: 5px;
+}
+
+.game-container .game-block .back  img{
+    font-size: 70px;
+    line-height: 100px;
+}
+
+.game-container .game-block .face {
+    backface-visibility: hidden;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+} 
+
+.game-container .game-block.is-flipped{
+    transform: rotateY(180deg);
+}
+.game-container .game-block img{
+    width: 50px;
+    height: 50px ;
+    border-radius: 5px;
+}
+/*leaderboard*/
+#leaderboard {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: #5f5b5b; 
+    border: 2px solid #c52d2d; 
+    border-radius: 3%; 
+    box-shadow: 0 4px 8px rgba(46, 31, 31, 0.2); 
+    padding: 30px; 
+    text-align: center; 
+    width: 90%; 
+    max-width: 450px; 
+    z-index: 1000; 
+    display: none; 
+}
+
+/* leaderboard h*/
+#leaderboard h2 {
+    font-size: 34px;
+    color: #d1d627;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+/* leaderboard p*/
+#leaderboard p {
+    font-size: 18px;
+    color: #f2ebeb;
+    margin: 10px 0;
+}
+
+/* leaderboard button*/
+#leaderboard .button {
+    background-color: #4b77b4; 
+    color: rgb(250, 250, 250); 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; 
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.6s ease; 
+}
+
+#leaderboard .button:hover {
+    background-color: #20e2c8; 
+}
+

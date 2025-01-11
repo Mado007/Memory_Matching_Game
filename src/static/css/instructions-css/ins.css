@@ -1,54 +1,126 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: white;
 }
-body{
-    /* background-color: black; */
-    background-image: url("../../../assets/images/game-icon/bg5.jpg");
+body {
+    background-image: url("../../../assets/images/game-icon/bg5.webp");
     background-size: cover;
     background-repeat: no-repeat;
-}
-.container {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    font-family: Arial, sans-serif;
 }
-.ins-container{
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     padding: 40px;
-    border: 2px solid white;
-    width: 50%;
-    box-shadow:0 0 5px rgba(203, 252, 255, 0.989),
-    0 0 5px rgba(203, 252, 255, 0.989),
-    0 0 5px rgba(203, 252, 255, 0.989),
-    0 0 10px rgba(203, 252, 255, 0.989);
+    max-width: 800px;
+}
+.ins-container {
+    padding: 40px;
+    border: 3px solid rgb(198, 42, 159);
+    width: 100%;
+    box-shadow: 0 0 5px rgba(203, 252, 255, 0.989), 0 0 10px rgba(203, 252, 255, 0.989);
     border-radius: 10px;
     background-color: rgba(53, 17, 69, 0.795);
+    text-align: center;
 }
-.ins >p {
+.ins {
+    margin-bottom: 30px;
+}
+.ins > p {
     text-align: justify;
-    line-height: 25px;
-    margin-bottom: 10px;
+    line-height: 30px;
+    margin-bottom: 15px;
     font-family: "Teko", serif;
-    font-optical-sizing: auto;
-    font-size: 24px;
+    font-size: 25px;
+    cursor: default;
 }
-.ins > h1{
+.ins > h1 {
     font-family: "Sixtyfour", serif;
     margin-bottom: 20px;
+    font-size: 3vw;
+    color: #ffc9f0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(239, 48, 208, 0.8);
+    animation: fadeInScale 1s ease-in-out;
+    cursor: default;
 }
-
 .ins-container > a {
     text-decoration: none;
-    color: rgb(62, 3, 53);
-    /* background-color: rgba(203, 252, 255, 0.989); */
+    color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 24px;
-    padding: 10px;
+    border-radius: 15px;
+    font-size: 28px;
+    padding: 12px 24px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    background-image: url("../../../assets/images/game-icon/buttonbg1.jpg");
+    transition: background-color 0.3s ease, transform 0.9s ease;
+    background: linear-gradient(20deg, rgba(97, 160, 163, 0.881), rgba(239, 48, 208, 0.8));
+    box-shadow: 0 0 10px rgba(239, 48, 208, 0.6);
+    position: relative;
+    overflow: hidden;
+    font-weight: 1000;
+}
+.ins-container > a:hover {
+    background: rgba(152, 187, 188, 0.9);
+    color: rgb(172, 5, 144);
+    transition: color 0.8s ease;
+    box-shadow: 0 4px 10px rgba(239, 48, 208, 0.6);
+}
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ins-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .ins > p {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .ins > h1 {
+        font-size: 28px;
+    }
+
+    .ins-container > a {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ins-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .ins > p {
+        font-size: 18px;
+    }
+
+    .ins > h1 {
+        font-size: 24px;
+    }
+
+    .ins-container > a {
+        font-size: 18px;
+        padding: 8px;
+    }
 }

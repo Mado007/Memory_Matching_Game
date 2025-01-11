@@ -37,19 +37,45 @@ button {
   cursor: pointer;
   transition: all 0.8s ease;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  animation: fadeInDown 1.9s ease-in-out;
+  animation: fadeInDown 1.9s ease-in-out, pulseGlow 2s infinite ease-in-out;
 }
 
 button:hover {
   background: linear-gradient(90deg, #0056b3, #007bff);
   transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.7), 0 4px 10px rgba(17, 30, 33, 0.8);
 }
 
 button:active {
   transform: scale(0.95);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
+
+/* Fade-In Animation */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(90px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* button Animation */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.981);
+  }
+  50% {
+    box-shadow: 0 10px 20px rgb(174, 4, 247), 0 4px 10px rgb(77, 2, 105);
+  }
+  100% {
+    box-shadow: 0 5px 10px rgba(237, 235, 239, 0.923);
+  }
+}
+
 
 .video-container {
   position: fixed;

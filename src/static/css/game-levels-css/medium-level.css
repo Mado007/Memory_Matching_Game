@@ -6,7 +6,7 @@
   font-size: 25px;
 }
 body {
-  background-image: url(../../../assets/images/game-icon/lvl2-background-2.webp);
+  background-image: url(../../../assets/images/game-icon/medium-Background/lvl2-background-2.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; 
@@ -26,21 +26,43 @@ body {
   border-radius: 5px;
   cursor: default;
 }
+/* audio control icon */
+.audio-control {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  cursor: pointer; 
+  margin-left: 100px;
+  
+}
+/* Styling for the icon image mute*/
+.audio-icon {
+  width: 40px; 
+  height: 40px; 
+  filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(4632%) hue-rotate(200deg) brightness(90%) contrast(85%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.audio-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(0) saturate(100%) invert(38%) sepia(10%) saturate(6742%) hue-rotate(207deg) brightness(91%) contrast(85%);
+}
+
 .game-container {
-  width: 90%;
-  max-width: 600px; 
-  height: 84%; 
+  height: 550px;
+  width: 600px;
   margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
   display: grid;
   grid-template-columns: repeat(6 , 1fr); 
   gap: 10px; 
   background-color: rgba(4, 4, 4, 0.79);
-  border-radius: 5px;
-  padding: 20px;
 }
 .game-container .game-block {
   width: 100%;
-  aspect-ratio: 1;
+  height: 100%;
   background-color: rgba(4, 4, 4, 0.79);
   border-radius: 5px;
   transition: transform 0.5s;
@@ -51,7 +73,8 @@ body {
 }
 .game-container .game-block .front,
 .game-container .game-block .back {
-  font-size: calc(2vw + 10px); 
+  font-size: 70px;
+  line-height: 100%;
   line-height: 1;
   color: white;
   display: flex;

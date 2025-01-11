@@ -6,8 +6,13 @@
     font-size: 25px;
 }
 body{
-    background-image: url(../../../assets/images/game-icon/background\ 1.jpg);
-    background-size:contain;
+    background-image: url(../../../assets/images/game-icon/easy-lvl-icons/easy-lvl-background.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
 
 }
 .info{
@@ -15,15 +20,31 @@ body{
     justify-content: space-between;
     width: 600px;
     margin: auto;
-    background-color: rgba(246, 64, 152, 0.6);
+    background-color: rgba(167, 168, 192, 0.882);
     padding: 20px;
     margin-top: 20px ;
     margin-bottom: 20px;
     border-radius: 5px;
-    font-family: sans-serif;
 }
-.playerName{
-    text-align: center;
+/* audio control icon */
+.audio-control {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+    margin-left: 100px;
+    
+}
+/* Styling for the icon image mute*/
+.audio-icon {
+    width: 40px; 
+    height: 40px; 
+    filter: brightness(0) saturate(100%) invert(21%) sepia(8%) saturate(4632%) hue-rotate(200deg) brightness(90%) contrast(85%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.audio-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(38%) sepia(10%) saturate(6742%) hue-rotate(207deg) brightness(91%) contrast(85%);
 }
 
 .game-container{

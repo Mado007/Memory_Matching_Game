@@ -14,6 +14,15 @@ body {
     align-items: center;
     font-family: Arial, sans-serif;
 }
+@font-face {
+    font-family: Sixtyfour;
+    src: url(../../../assets/fonts/Sixtyfour-Regular-VariableFont_BLED\,SCAN.ttf);
+  }
+  @font-face {
+    font-family: teko;
+    src: url(../../../assets/fonts/Jersey10-Regular.ttf);
+  }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -58,6 +67,7 @@ body {
     border-radius: 15px;
     font-size: 28px;
     padding: 12px 24px;
+    font-family: teko, arial, helvetica;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.9s ease;
     background: linear-gradient(20deg, rgba(97, 160, 163, 0.881), rgba(239, 48, 208, 0.8));

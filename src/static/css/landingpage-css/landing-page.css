@@ -1,11 +1,18 @@
 body {
   margin: 0;
-  font-family: "Sixtyfour", serif;
+  font-family: Sixtyfour, serif;
   overflow: hidden;
-  background: linear-gradient(135deg, #414752, #567bb9); /* Smooth gradient background */
+  /* background: linear-gradient(135deg, #414752, #567bb9); */
   color: #f0f0f0;
 }
-
+@font-face {
+  font-family: Sixtyfour;
+  src: url(../../../assets/fonts/Sixtyfour-Regular-VariableFont_BLED\,SCAN.ttf);
+}
+@font-face {
+  font-family: teko;
+  src: url(../../../assets/fonts/Jersey10-Regular.ttf);
+}
 .container {
   position: relative;
   display: flex;
@@ -20,26 +27,38 @@ body {
 
 h1 {
   margin-bottom: 5%;
-  font-size: 6.5vw;
-  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  font-size: 6vw;
+  text-shadow: 5px 5px 3px #5d033cbe;
   color: rgba(255, 255, 255, 0.908);
   cursor: default; 
-  animation: fadeInDown 1.9s ease-in-out;
+  animation: fadeInDown 1.9s ease-in-out , h1Glow 2s infinite ease-in-out ;
+  transition: all 0.8s ease;
+  display: inline;
 }
 
 button {
-  padding: 1.5% 8%;
-  font-size: 4vw;
-  color: #ffffff;
+  padding: 1% 6%;
+  font-size: 2vw;
+  font-weight: 900;
+  font-family: Sixtyfour,sans-serif;
+  /* color: #ffffff; */
   background: linear-gradient(90deg, #007bff, #111e21);
   border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.8s ease;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  animation: fadeInDown 1.9s ease-in-out, pulseGlow 2s infinite ease-in-out;
+  animation: fadeInDown 1.9s ease-in-out, pulseGlow 2s infinite ease-in-out, pulseColor 2s infinite ease-in-out;
 }
-
+.blue{
+  color:#007bff
+}
+.yellow{
+  color:rgb(245, 246, 241);
+}
+.red{
+  color:rgb(217, 219, 216);
+}
 button:hover {
   background: linear-gradient(90deg, #0056b3, #007bff);
   transform: scale(1.1);
@@ -75,6 +94,30 @@ button:active {
     box-shadow: 0 5px 10px rgba(237, 235, 239, 0.923);
   }
 }
+/* H1 Animation */
+@keyframes h1Glow {
+  0% {
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.981);
+  }
+  50% {
+    text-shadow: 5px 5px 3px rgb(174, 4, 247), 0 4px 4px rgb(77, 2, 105);
+  }
+  100% {
+    text-shadow: 3px 3px 3px rgba(237, 235, 239, 0.923);
+  }
+}
+/* button color Animation */
+@keyframes pulseColor {
+  0% {
+    color:  rgba(255, 255, 255, 0.981);
+  }
+  50% {
+    color:  rgb(174, 4, 247);
+  }
+  100% {
+    color: rgba(237, 235, 239, 0.923);
+  }
+}
 
 
 .video-container {
@@ -92,7 +135,7 @@ iframe {
   width: 100%;
   height: 100%;
   border: none;
-}
+} */
 
 @media (max-width: 768px) {
   h1 {
@@ -135,4 +178,31 @@ iframe {
   to {
     opacity: 1;
   }
+}
+/* Video container styling */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensures the video stays in the background */
+  overflow: hidden; /* Hides any overflow to ensure the video fits perfectly */
+}
+
+/* Video element styling */
+.video-container video {
+  position: absolute;
+  top:60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  min-height: 138%; 
+  object-fit: cover;
+  /* -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px); */
 }

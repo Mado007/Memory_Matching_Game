@@ -4,8 +4,11 @@
 Dive into the thrilling world of **Memory Game**, where your mind is the ultimate weapon!  
 Challenge your memory skills and reflexes in this engaging card-matching adventure.
 
+## Live Demo 🌐
+Try the game live here: [Memory Game](https://github.com/Mado007/Memory_Matching_Game.git)
+
 ## Screenshots 📸
-![Game Screenshot]( memory-game-screenshot.png  )
+![Game Screenshot](src/assets/images/site-icon/memory-game-screenshot.png)
 
 ## How to Play 🚀
 
@@ -88,12 +91,4 @@ We welcome contributions to enhance the game!
 
 ### **9. License** 
 ## License ⚖️
-This project is licensed under the MIT License. Feel free to use and modify it, but please give credit where it’s due.
-
-## Acknowledgments ❤️
-- Inspiration: [Any reference or resource you used]
-- Special thanks to everyone who contributed to the project.
-
-
-## Live Demo 🌐
-Try the game live here: [Memory Game](https://github.com/Mado007/Memory_Matching_Game.git)
+- This project is licensed under the [MIT License](LICENSE). Feel free to use and modify it, but please give credit where it’s due.

@@ -8,8 +8,8 @@ Challenge your memory skills and reflexes in this engaging card-matching adventu
 Try the game live here: [Memory Game](https://github.com/Mado007/Memory_Matching_Game.git)
 
 ## Screenshots 📸
-![Game Screenshot](src/assets/images/site-icon/memory-game-screenshot.png)
-
+![Game Screenshot](./src/assets/images/site-icon/start%20page.png)
+[home screen] (src/assets/images/site-icon/)
 ## How to Play 🚀
 
 1. **Start the Game**  

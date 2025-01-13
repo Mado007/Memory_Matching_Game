@@ -80,8 +80,8 @@ function endGame() {
     const elapsedTime = document.getElementById("game-time").textContent;
     const currentScore = { moves, time: elapsedTime };
     scores.push(currentScore);
-    scores.sort((a, b) => a.moves - b.moves || a.time.localeCompare(b.time)); // Sort by moves and time
-    localStorage.setItem("scores", JSON.stringify(scores)); // Save to localStorage
+    scores.sort((a, b) => a.moves - b.moves || a.time.localeCompare(b.time)); // ^^Sort by moves and time
+    localStorage.setItem("scores", JSON.stringify(scores)); // ^^Save to localStorage
     showLeaderboard(currentScore);
 }
 
@@ -91,7 +91,7 @@ function showLeaderboard(currentScore) {
     document.getElementById("leaderboard-time").textContent = currentScore.time;
   
     const scoresContainer = document.getElementById("scores");
-    scoresContainer.innerHTML = ""; // Clear previous scores
+    scoresContainer.innerHTML = ""; // ^^Clear previous scores
   
     scores.slice(0, 5).forEach((score, index) => {
         const scoreItem = document.createElement("p");
@@ -99,8 +99,11 @@ function showLeaderboard(currentScore) {
         scoresContainer.appendChild(scoreItem);
     });
   
-    leaderboard.style.display = "block"; // Show the leaderboard
+    leaderboard.style.display = "block"; // ^^Show the leaderboard
     leaderboard.style.visibility = "visible"; 
+    // Play the celebration sound
+    const celebrateSound = document.getElementById("celebrate-Sound");
+    celebrateSound.play();
   }
 
 // Shuffle cards

@@ -10,6 +10,7 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Technologies Used](#technologies-used)
+- [Team](#team)
 - [Contribution](#contribution)
 - [License](#license)
 
@@ -115,6 +116,16 @@ Explore the API endpoints for the Memory Matching Game using the Postman collect
 - **HTML5**: For the game structure.
 - **CSS3**: For styling and animations.
 - **JavaScript**: For game logic and interactivity.
+
+## Team
+
+👥💪  
+Meet the amazing team behind this project:
+
+- **[Ahmed Haidar](https://www.linkedin.com/in/ahmed-haidar07/)**
+- **[Rehab Mohamed](https://www.linkedin.com/in/rehab-mohamed-10064921b/)**
+- **[Ahmed Galal](https://www.linkedin.com/in/ahmedgalal122/)**
+- **[Mahmoud Elsayed](https://www.linkedin.com/in/mahmoud-elsayed/)**
 
 ## Contribution
 

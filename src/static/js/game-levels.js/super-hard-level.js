@@ -108,6 +108,9 @@ function showLeaderboard(currentScore) {
   
     leaderboard.style.display = "block"; // Show the leaderboard
     leaderboard.style.visibility = "visible"; 
+    // Play the celebration sound
+    const celebrateSound = document.getElementById("celebrate-Sound");
+    celebrateSound.play();
   }
 
 // Shuffle cards

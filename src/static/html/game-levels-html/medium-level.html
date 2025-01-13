@@ -20,23 +20,25 @@
   <audio id="matchSound" src="../../../assets/sounds/matched.wav"></audio>
 
   <div class="header">
-    <a href="../all-levels-html/Leveldetermination.html" class="Back"> <img src="../../../assets/images/game-icon/back.png" alt=""> </a>
-  
-  <div class="info">
-    <div class="playerName">
-      <p>Time: <span id="game-time">00:00</span></p>
+    <a href="../all-levels-html/Leveldetermination.html" class="Back"> <img
+        src="../../../assets/images/game-icon/back.png" alt="back-icon"> </a>
+
+    <div class="info">
+      <div class="playerName">
+        <p>Time: <span id="game-time">00:00</span></p>
+      </div>
+      <div class="audio-control">
+        <img src="../../../assets/images/volume-icon/volume-up.svg" class="audio-icon" alt="Volume Icon">
+      </div>
+      <div class="tries">
+        Moves: <span>0</span>
+      </div>
     </div>
-    <div class="audio-control">
-      <img src="../../../assets/images/volume-icon/volume-up.svg" class="audio-icon" alt="Volume Icon">
-    </div>
-    <div class="tries">
-      Moves: <span>0</span>
-    </div>
+
+    <a href="" class="restart" id="restart"> <img src="../../../assets/images/game-icon/restart.png" alt="restart-icon">
+    </a>
+
   </div>
-
-  <a href="" class="restart" id="restart"> <img src="../../../assets/images/game-icon/restart.png" alt=""> </a>
-
-</div>
 
   <div class="game-container" id="game-container">
     <!-- card 1 -->
@@ -370,6 +372,7 @@
       <p>Time: <span id="leaderboard-time">00:00</span></p>
       <div id="scores"></div>
       <button class="button" id="restart-button">Restart</button>
+      <audio id="celebrate-Sound" src="../../../assets/sounds/leadboard-celebrate.wav"></audio>
     </div>
     <script src="../../js/game-levels.js/medium-level.js"></script>
     <script src="../../js/game-setting-js/setting.js"></script>
